@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Una pequeña arcade web con minijuegos gratuitos.">
+  <title>Pixel Play — Mini Arcade</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Pixel Play inicio"><span class="brand-icon">✦</span> PIXEL<span>PLAY</span></a>
+    <div class="header-pill"><span class="live-dot"></span> ARCADE ONLINE</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">TU RECREO DIGITAL</p>
+      <h1>Pequeños juegos.<br><span>Grandes aventuras.</span></h1>
+      <p class="hero-copy">Elige un juego, supera tu récord y diviértete un rato.</p>
+      <a class="primary-button" href="#games">EXPLORAR JUEGOS <span>↓</span></a>
+      <div class="hero-spark spark-one">✦</div><div class="hero-spark spark-two">✧</div>
+    </section>
+
+    <section class="games-section" id="games">
+      <div class="section-heading">
+        <div><p class="eyebrow">SELECCIONA TU MISIÓN</p><h2>La sala de juegos</h2></div>
+        <p class="game-count">03 JUEGOS DISPONIBLES</p>
+      </div>
+
+      <div class="game-grid">
+        <article class="game-card pac-card">
+          <div class="card-art pac-art"><span class="art-label">ARCADE CLASSIC</span><div class="pacman-art"></div><span class="pixel-ghost ghost-pink">●</span><span class="pixel-ghost ghost-blue">●</span><span class="dot-trail">· · · · ·</span></div>
+          <div class="card-body"><div class="card-title-row"><div><p class="game-number">JUEGO 01</p><h3>Comepuntos</h3></div><span class="game-emoji">👾</span></div><p>Recoge todos los puntos del laberinto y evita a los fantasmas.</p><div class="card-footer"><span class="difficulty">● FÁCIL</span><button class="play-button" data-game="pacman">JUGAR <span>↗</span></button></div></div>
+        </article>
+
+        <article class="game-card maze-card">
+          <div class="card-art maze-art"><span class="art-label">BRAIN CHALLENGE</span><div class="maze-mini" aria-hidden="true"><i> </i><i> </i><i> </i><i> </i><i> </i><i> </i><i> </i><i> </i><i> </i><i> </i><i> </i><i> </i><i> </i><i> </i><i> </i><i> </i></div><span class="maze-person">●</span><span class="maze-goal">★</span></div>
+          <div class="card-body"><div class="card-title-row"><div><p class="game-number">JUEGO 02</p><h3>Escape Maze</h3></div><span class="game-emoji">🧩</span></div><p>Encuentra la salida, esquiva las paredes y llega a la meta.</p><div class="card-footer"><span class="difficulty medium">● MEDIO</span><button class="play-button" data-game="maze">JUGAR <span>↗</span></button></div></div>
+        </article>
+
+        <article class="game-card star-card">
+          <div class="card-art star-art"><span class="art-label">SCORE ATTACK</span><span class="big-star">★</span><span class="little-star star-a">✦</span><span class="little-star star-b">✧</span><span class="little-star star-c">✦</span><span class="platform platform-one"></span><span class="platform platform-two"></span><span class="star-player">●</span></div>
+          <div class="card-body"><div class="card-title-row"><div><p class="game-number">JUEGO 03</p><h3>Cazador de estrellas</h3></div><span class="game-emoji">⭐</span></div><p>Consigue tantas estrellas como puedas antes de que se acabe el tiempo.</p><div class="card-footer"><span class="difficulty medium">● REFLEJOS</span><button class="play-button" data-game="stars">JUGAR <span>↗</span></button></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="game-stage hidden" id="gameStage" aria-live="polite">
+      <div class="stage-heading"><div><p class="eyebrow" id="stageEyebrow">EN JUEGO</p><h2 id="stageTitle">Minijuego</h2></div><button id="closeGame" class="close-button" aria-label="Cerrar juego">✕ CERRAR</button></div>
+      <div class="game-panel">
+        <div class="game-toolbar"><p id="gameInstructions">Usa las flechas del teclado para moverte.</p><div class="score-display">PUNTOS <strong id="score">0</strong></div></div>
+        <div id="gameArea" class="game-area"></div>
+        <div class="game-controls"><button id="restartGame" class="primary-button">↻ REINICIAR</button><p id="gameStatus">¡Buena suerte!</p></div>
+        <div class="mobile-controls" id="mobileControls" aria-label="Controles de movimiento">
+          <button data-dir="up" aria-label="Arriba">▲</button><div><button data-dir="left" aria-label="Izquierda">◀</button><button data-dir="down" aria-label="Abajo">▼</button><button data-dir="right" aria-label="Derecha">▶</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tips-strip"><span class="tips-icon">✦</span><p><strong>Consejo de jugador:</strong> puedes usar las flechas del teclado o los controles táctiles si juegas desde tu celular.</p><span class="tips-decoration">INSERT COIN ✧</span></section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#"><span class="brand-icon">✦</span> PIXEL<span>PLAY</span></a><p>Hecho para jugar, creado con curiosidad. <span>© 2026</span></p></footer>
+</body>
+</html>
